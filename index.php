@@ -12,7 +12,7 @@
     <?php require_once("header.php"); ?>
 
     <div class="container headerAchtergrond">
-        <section>
+        <section class="">
             <h1>Bootverhuur Bob</h1>
             <p>Als u een boot wilt huren, dan zit u op het goede adres</p>
         </section>
