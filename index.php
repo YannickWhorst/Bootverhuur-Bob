@@ -12,7 +12,10 @@
     <?php require_once("header.php"); ?>
 
     <div class="container headerAchtergrond">
-        <h1>Booten huren</h1>
+        <section>
+            <h1>Bootverhuur Bob</h1>
+            <p>Als u een boot wilt huren, dan zit u op het goede adres</p>
+        </section>
     </div>
 
     <?php require_once("footer.php"); ?>
