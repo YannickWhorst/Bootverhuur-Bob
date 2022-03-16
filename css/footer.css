@@ -1,0 +1,8 @@
+.centerFooter{
+    margin-left: 500px;
+}
+
+.footerContact{
+    display: flex;
+    flex-direction: column;
+}

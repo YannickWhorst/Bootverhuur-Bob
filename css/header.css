@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    font-family: Arial ;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.navBackground{
+    background-color: aquamarine;
+    margin-top: -20px;
+    padding-top: 20px;
+    height: 100px;
+}
+
+.navTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.navUl{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navLi{
+    display: flex;
+}
+
+.navA{
+    text-decoration: none;
+    color: black;
+}
+
+.navA:hover{
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    transition: font-size, 0.3s;
+    transition: font-weight, 0.3s;
+}
