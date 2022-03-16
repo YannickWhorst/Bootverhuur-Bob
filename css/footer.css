@@ -1,8 +1,17 @@
-.centerFooter{
-    margin-left: 500px;
+.footerContainer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aqua;
+    padding: 30px;
 }
 
 .footerContact{
     display: flex;
     flex-direction: column;
+}
+
+.footerSocials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
