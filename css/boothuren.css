@@ -14,7 +14,7 @@
 .bootblok{
     background-color: lightblue;
     width: 350px;
-    height: 350px;
+    height: 430px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,3 +26,16 @@
 .imgKleiner{
     height: 200px;
 }
+
+.bootLink{
+    text-decoration: none;
+    color: black;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bootLink:hover{
+    background-color: rgba(128, 128, 128, 0.7);
+}
+

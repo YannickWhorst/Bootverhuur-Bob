@@ -23,24 +23,28 @@
             <img src="img/Winner-8.jpg" class="imgKleiner">
             <p>Prijs: €477 per week</p>
             <p>Capaciteit: 6 personen</p>
+            <a class="bootLink" href="winner8.php">Deze boot huren?</a>
         </div>
         <div class="bootblok">
             <h1>Bavaria 33</h1>
             <img src="img/Bavaria-33.jpg" class="imgKleiner">
             <p>Prijs: €975 per week</p>
             <p>Capaciteit: 7 personen</p>
+            <a class="bootLink" href="bavaria33.php">Deze boot huren?</a>
         </div>
         <div class="bootblok">
             <h1>Mediterranee 47</h1>
             <img src="img/mediterranee-47.jpg" class="imgKleiner">
             <p>Prijs: €2012 per week</p>
             <p>Capaciteit: 4 personen</p>
+            <a class="bootLink" href="mediterranee47.php">Deze boot huren?</a>
         </div>
         <div class="bootblok">
             <h1>Fun 3</h1>
             <img src="img/Fun-3.jpg" class="imgKleiner">
             <p>Prijs: €150 per week</p>
             <p>Capaciteit: 2 personen</p>
+            <a class="bootLink" href="fun3.php">Deze boot huren?</a>
         </div>
     </div>
 </div>
