@@ -14,13 +14,8 @@ function db_getData($query) {
         $db = db_connect();
         $queryPDO = $db->prepare($query);
         $queryPDO->execute();
-        $result = $queryPDO->fetchAll(PDO::FETCH_ASSOC);
-        foreach($result as $data){
-            echo $data["boot_naam"] . " ";
-            echo "€" . $data["boot_prijs"] . " ";
-            echo $data["boot_capaciteit"] . " ";
-            echo $data["boot_image"] . "<br> ";
-        }
+        $db = null;
+        return $queryPDO;
     } catch(PDOException $e) {
         die("Error: " . $e->getMessage());
     }

@@ -19,41 +19,21 @@
         <h1>Boten huren</h1>
         <p>Hier kunt u uw boot huren.</p>
     </header>
-
-    <?php
-        db_getData("SELECT * FROM boten");
-    ?>
-
+    <?php $boten = db_getData("SELECT * FROM boten"); ?>
     <div class="boten">
-        <div class="bootblok">
-            <h1>Winner 8</h1>
-            <img src="img/Winner-8.jpg" class="imgKleiner">
-            <p>Prijs: €477 per week</p>
-            <p>Capaciteit: 6 personen</p>
-            <a class="bootLink" href="winner8.php">Deze boot huren?</a>
-        </div>
-        <div class="bootblok">
-            <h1>Bavaria 33</h1>
-            <img src="img/Bavaria-33.jpg" class="imgKleiner">
-            <p>Prijs: €975 per week</p>
-            <p>Capaciteit: 7 personen</p>
-            <a class="bootLink" href="bavaria33.php">Deze boot huren?</a>
-        </div>
-        <div class="bootblok">
-            <h1>Mediterranee 47</h1>
-            <img src="img/mediterranee-47.jpg" class="imgKleiner">
-            <p>Prijs: €2012 per week</p>
-            <p>Capaciteit: 4 personen</p>
-            <a class="bootLink" href="mediterranee47.php">Deze boot huren?</a>
-        </div>
-        <div class="bootblok">
-            <h1>Fun 3</h1>
-            <img src="img/Fun-3.jpg" class="imgKleiner">
-            <p>Prijs: €150 per week</p>
-            <p>Capaciteit: 2 personen</p>
-            <a class="bootLink" href="fun3.php">Deze boot huren?</a>
-        </div>
+        <?php
+            while($boot = $boten->fetch(PDO::FETCH_ASSOC)){
+        ?>
+            <div class="bootblok">
+                <h1><?php echo $boot["boot_naam"]?></h1>
+                <img src="img/<?php echo $boot["boot_image"]?>" class="imgKleiner">
+                <p><?php echo "&euro; " . number_format($boot["boot_prijs"],2,",",".")?></p>
+                <p><?php echo $boot["boot_capaciteit"]?></p>
+                <a class="bootLink" href="winner8.php">Deze boot huren?</a>
+            </div>
+        <?php }?>
     </div>
+</div>
 </div>
 
 <?php require_once("footer.php"); ?>
