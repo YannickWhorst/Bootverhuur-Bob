@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="css/boothuren.css">
 </head>
 <body>
-<?php require_once("header.php"); ?>
+<?php 
+    require_once("header.php"); 
+    require("src/database_functions.php");
+?>
 
 <div class="container">
     <header>
         <h1>Boten huren</h1>
         <p>Hier kunt u uw boot huren.</p>
     </header>
+
+    <?php
+        db_getData("SELECT * FROM boten");
+    ?>
 
     <div class="boten">
         <div class="bootblok">

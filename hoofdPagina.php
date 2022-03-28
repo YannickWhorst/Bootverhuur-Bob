@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="img/boot favicon.png" type="image/x-icon">
 </head>
 <body>
-    <?php require_once("header.php"); ?>
+    <?php require_once("header.php"); 
+        require("src/database_functions.php");
+    ?>
 
     <div class="headerAchtergrond">
         <section class="container header">
@@ -21,5 +23,8 @@
     </div>
 
     <?php require_once("footer.php"); ?>
+    <?php
+        db_connect();
+    ?>
 </body>
 </html>
