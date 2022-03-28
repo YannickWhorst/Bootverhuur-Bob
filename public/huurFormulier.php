@@ -47,15 +47,14 @@ $boten = db_getData("SELECT * FROM boten");
         $tussenNaam = $_POST['tussenNaam'];
         $aNaam = $_POST['aNaam'];
         $email = $_POST['email'];
-        $bootType = $_POST['bootType']; 
+        $telefoonNummer = $_POST['telefoonNr'];
 
-        echo $bootType;
     } else {
         $vNaam = "";
         $tussenNaam = "";
         $aNaam = "";
         $email = "";
-        $bootType = "";
+        $telefoonNummer = "";
     }
 
 
