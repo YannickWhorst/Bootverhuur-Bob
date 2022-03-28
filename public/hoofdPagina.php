@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootverhuur Bob</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/boot favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/boot favicon.png" type="image/x-icon">
 </head>
 <body>
-    <?php require_once("header.php"); 
-        require("src/database_functions.php");
+    <?php require_once("../includes/header.php"); 
+        require("../src/database_functions.php");
     ?>
 
     <div class="headerAchtergrond">
@@ -22,6 +22,6 @@
         </section>
     </div>
 
-    <?php require_once("footer.php"); ?>
+    <?php require_once("../includes/footer.php"); ?>
 </body>
 </html>

@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="css/huurFormulier.css">
+<link rel="stylesheet" href="../css/huurFormulier.css">
 <?php 
 
-require("header.php");
-require("src/database_functions.php");
+require("../includes/header.php");
+require("../src/database_functions.php");
 
 $boten = db_getData("SELECT * FROM boten");
 
@@ -16,11 +16,11 @@ $boten = db_getData("SELECT * FROM boten");
             <input type="text" name="tussenNaam" id="tussenNaam" placeholder="Tussenvoegsel"> <br>
             <input type="text" name="aNaam" id="aNaam" placeholder="Achternaam*" required> <br>
             <input type="email" name="email" id="email" placeholder="Email*" required> <br>
-            <p>Type boot</p><select name="boot" id="typeBoot">
+            <p>Type boot</p><select name="boot" id="bootType">
             <?php
                 while($typeBoot = $boten->fetch(PDO::FETCH_ASSOC)){
             ?>
-                <option value=""><?php echo $typeBoot["boot_naam"]?></option>
+                <option value="" id="typeBoot"><?php echo $typeBoot["boot_naam"]?></option>
             <?php
                 }
             ?>
@@ -38,14 +38,17 @@ $boten = db_getData("SELECT * FROM boten");
         $tussenNaam = $_POST['tussenNaam'];
         $aNaam = $_POST['aNaam'];
         $email = $_POST['email'];
+        $bootType = $_POST['bootType']; 
 
+        echo $bootType;
     } else {
         $vNaam = "";
         $tussenNaam = "";
         $aNaam = "";
         $email = "";
+        $bootType = "";
     }
 
 
-    require("footer.php");
+    require("../includes/footer.php");
 ?>
