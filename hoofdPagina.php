@@ -23,8 +23,5 @@
     </div>
 
     <?php require_once("footer.php"); ?>
-    <?php
-        db_connect();
-    ?>
 </body>
 </html>

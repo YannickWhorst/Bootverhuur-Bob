@@ -23,5 +23,5 @@ function db_getData($query) {
 }
 
 function db_insertData($query) {
-
+    
 }
