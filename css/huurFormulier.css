@@ -1,9 +1,59 @@
-.huurTitel{
+.huurTitel {
     display: flex;
     justify-content: center;
 }
 
-.formulier{
+.formulier {
     display: flex;
     justify-content: center;
+}
+
+.inputs {
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 183px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.submit {
+    margin-top: 10px;
+    width: 183px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lightgray;
+}
+
+.submit:hover {
+    background-color: gray;
+}
+
+.koppen{
+    text-align: center;
+    margin: 0;
+}
+
+.verplicht {
+    color: red;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Chrome, Firefox en Opera placeholder center */
+input::placeholder{
+    text-align: center;
+}
+
+/* Firefox */
+input::-moz-placeholder {
+    text-align: center;
+}
+
+select {
+    text-align: center;
 }

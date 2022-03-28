@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootverhuur Bob</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="../img/boot favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <?php require_once("../includes/header.php"); 
+    <?php require_once("../includes/header.php");
         require("../src/database_functions.php");
     ?>
 

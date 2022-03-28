@@ -12,6 +12,7 @@
 <?php 
     require_once("../includes/header.php"); 
     require("../src/database_functions.php");
+    $boten = db_getData("SELECT * FROM boten");
 ?>
 
 <div class="container">
@@ -19,7 +20,6 @@
         <h1>Boten huren</h1>
         <p>Hier kunt u uw boot huren.</p>
     </header>
-    <?php $boten = db_getData("SELECT * FROM boten"); ?>
     <div class="boten">
         <?php
             while($boot = $boten->fetch(PDO::FETCH_ASSOC)){
