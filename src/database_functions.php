@@ -23,5 +23,13 @@ function db_getData($query) {
 }
 
 function db_insertData($query) {
-    
+    try{
+        $db = db_connect();
+        $queryPDO = $db->prepare($query);
+        $queryPDO->execute();
+        $db = null;
+        return $queryPDO;
+    } catch(PDOException $e) {
+        die("Error: " . $e->getMessage());
+    }
 }

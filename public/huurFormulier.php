@@ -48,13 +48,15 @@ $boten = db_getData("SELECT * FROM boten");
         $aNaam = $_POST['aNaam'];
         $email = $_POST['email'];
         $telefoonNummer = $_POST['telefoonNr'];
-
+        $dagDeel = $_POST['dagDeel'];
+        
     } else {
         $vNaam = "";
         $tussenNaam = "";
         $aNaam = "";
         $email = "";
         $telefoonNummer = "";
+        $dagDeel = "";
     }
 
 

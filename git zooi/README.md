@@ -1,2 +1,0 @@
-# Bootverhuur
-Bootverhuur voor school
