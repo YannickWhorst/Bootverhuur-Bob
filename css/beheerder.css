@@ -1,5 +1,14 @@
+.titel{
+    display: flex;
+    justify-content: center;
+}
+
+.tabel{
+    display: flex;
+    justify-content: center;
+}
+
 td{
-    border: 1px solid black;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }

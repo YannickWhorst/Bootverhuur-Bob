@@ -1,5 +1,11 @@
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/boothuren.css">
+<link rel="stylesheet" href="../css/huurFormulier.css">
+<link rel="stylesheet" href="../css/inloggen.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/beheerder.css">
+
 
 <header class="navBackground">
     <nav class="container">

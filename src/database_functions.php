@@ -1,8 +1,12 @@
 <?php
 
+define("dbHost", "mysql:host=localhost;dbname=bootverhuur");
+define("username", "root");
+define("password", "");
+
 function db_connect(){
     try {
-        $db = new PDO("mysql:host=localhost;dbname=bootverhuur", "root", "");
+        $db = new PDO(dbHost, username, password);
         return $db;
     } catch (PDOException $e) {
         die("Error!:" . $e->getMessage());
