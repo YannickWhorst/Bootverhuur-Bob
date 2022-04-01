@@ -1,6 +1,7 @@
 <?php require("../includes/header.php"); 
       require("../src/database_functions.php");
 
+    // Data krijgen uit de database
     $orders = db_getData("SELECT * FROM orders");
 ?>
 <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
@@ -31,15 +32,37 @@
             </tr>
         <?php }?>
     </table>
-    
 </div>
 
 <div class="voegBootToe">
-            
+    <h2>Voeg een boot toe</h2>
+
+    <form action="" method="post">
+        <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>
+        <input type="text" name="bootprijs" id="bootprijs" placeholder="Boot prijs" required> <br>
+        <input type="text" name="bootcapaciteit" id="bootcapaciteit" placeholder="Boot capaciteit" required> <br>
+        <input type="text" name="bootimage" id="bootimage" placeholder="Boot plaatje" required> <br>
+        <input type="submit" name="toevoegen" value="Voeg toe">
+    </form>
+
+    <!-- Boot toevoegen -->
+    <?php 
+    
+    if(isset($_POST['toevoegen'])){
+        $naam = $_POST['bootnaam'];
+        $prijs = $_POST['bootprijs'];
+        $capaciteit = $_POST['bootcapaciteit'];
+        $plaatje = $_POST['bootimage'];
+
+        // Data inserten in de database
+        $boot = db_insertData("INSERT INTO `boten`(`boot_naam`, `boot_prijs`, `boot_capaciteit`, `boot_image`) 
+                               VALUES ('$naam','$prijs','$capaciteit','$plaatje')");
+    }
+
+    ?>
 </div>
 
 <?php require("../includes/footer.php"); ?>
-
 
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js"></script>

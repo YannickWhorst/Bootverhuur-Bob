@@ -1,0 +1,9 @@
+.h1Title{
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+}

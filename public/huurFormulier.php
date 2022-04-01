@@ -7,6 +7,7 @@ require("../includes/header.php");
 require("../src/database_functions.php");
 
 $boten = db_getData("SELECT * FROM boten");
+$dagdeel = db_getData("SELECT * FROM dagdeel");
 
 ?>
 
@@ -21,11 +22,14 @@ $boten = db_getData("SELECT * FROM boten");
             <h3 class="koppen">Dag*</h3>
             <input class="dateTime" type="date" name="dateTime" id="dateTime"> <br>
             <select class="inputs" name="dagdeel" id="dagdeel">
-                <option value="">Kies een dagdeel</option>
-                <option value="Ochtend">Ochtend</option>
-                <option value="Middag">Middag</option>
-                <option value="Avond">Avond</option>
-                <option value="Hele dag">Hele dag</option>
+                <option value="boot">Kies een dagdeel</option>
+                <?php
+                while($deelDag = $dagdeel->fetch(PDO::FETCH_ASSOC)){
+            ?>
+                <option name="boot" value="<?php echo $deelDag["Dagdeel"]?>" id="boot"><?php echo $deelDag["Dagdeel"]?></option>
+            <?php
+                }
+            ?>
             </select>
             <h3 class="koppen">Type boot*</h3>
             <select class="inputs" name="boot" id="boot">
@@ -56,8 +60,7 @@ $boten = db_getData("SELECT * FROM boten");
         $dag = $_POST['dateTime'];
         $dagDeel = $_POST['dagdeel'];
 
-        db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) 
-                       VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
+        db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
         
         
     } else {
