@@ -1,0 +1,35 @@
+.velden {
+    color: red;
+    font-size: 15px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.heleForm{
+    display: flex;
+    justify-content: center;
+}
+
+.loginInputs{
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.loginSubmit{
+    margin-top: 10px;
+    width: 212px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lightgray;
+}

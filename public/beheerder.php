@@ -3,7 +3,7 @@
 
     $orders = db_getData("SELECT * FROM orders");
 ?>
-
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 
 <div>
     <h1 class="titel">Alle orders</h1>
