@@ -12,3 +12,13 @@ td{
     padding: 10px;
     text-align: center;
 }
+
+.voegBoot{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.submitKnop{
+    width: 170.4px;
+}

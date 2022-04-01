@@ -35,15 +35,18 @@
 </div>
 
 <div class="voegBootToe">
-    <h2>Voeg een boot toe</h2>
+    <h2 class="titel">Voeg een boot toe</h2>
 
-    <form action="" method="post">
-        <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>
-        <input type="text" name="bootprijs" id="bootprijs" placeholder="Boot prijs" required> <br>
-        <input type="text" name="bootcapaciteit" id="bootcapaciteit" placeholder="Boot capaciteit" required> <br>
-        <input type="text" name="bootimage" id="bootimage" placeholder="Boot plaatje" required> <br>
-        <input type="submit" name="toevoegen" value="Voeg toe">
-    </form>
+    <div class="voegBoot">
+        <form action="" method="post">
+            <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>
+            <input type="text" name="bootprijs" id="bootprijs" placeholder="Boot prijs" required> <br>
+            <input type="text" name="bootcapaciteit" id="bootcapaciteit" placeholder="Boot capaciteit" required> <br>
+            <input type="text" name="bootimage" id="bootimage" placeholder="Boot plaatje" required> <br>
+            <input class="submitKnop" type="submit" name="toevoegen" value="Voeg toe">
+        </form> 
+    </div>
+    
 
     <!-- Boot toevoegen -->
     <?php 

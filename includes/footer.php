@@ -12,6 +12,7 @@
     </div>
     <div class="footerSocials">
         <h1>Ons volgen?</h1>
-        <a href="#"><img src="../img/instagram logo.png"><img src="../img/facebook logo.png"></a>
+        <a href="#"><img src="../img/instagram logo.png"></a>
+        <a href="#"><img src="../img/facebook logo.png"></a>
     </div>
 </footer>

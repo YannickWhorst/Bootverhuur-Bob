@@ -30,12 +30,13 @@
 .bootLink{
     text-decoration: none;
     color: black;
-    background-color: gray;
+    background-color: white;
+    border: 2px solid black;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .bootLink:hover{
-    background-color: rgba(128, 128, 128, 0.7);
+    text-decoration: underline;
 }
 
