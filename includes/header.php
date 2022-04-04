@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/beheerder.css">
 <link rel="stylesheet" href="../css/contact.css">
+<link rel="stylesheet" href="../css/orderConfirm.css">
 
 
 <header class="navBackground">

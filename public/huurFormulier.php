@@ -62,7 +62,7 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
 
         db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
         
-        
+        header("Location: ./orderConfirm.php");
     } else {
         $vNaam = "";
         $tussenNaam = "";
