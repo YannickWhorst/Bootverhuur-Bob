@@ -12,7 +12,9 @@
 }
 
 .bootblok{
-    background-color: lightblue;
+    background-color: white;
+    box-shadow: 3px 3px 4px 4px #888888;
+    border-radius: 5px;
     width: 350px;
     height: 430px;
     display: flex;

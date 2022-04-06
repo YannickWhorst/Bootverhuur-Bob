@@ -38,9 +38,12 @@ require("../src/database_functions.php");
 </div>
 
 <!-- Boot toevoegen -->
+<hr>
+
 <div class="voegBootToe">
     <h2 class="titel">Voeg een boot toe</h2>
 
+    
     <div class="voegBoot">
         <form action="" method="post">
             <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>
@@ -50,7 +53,6 @@ require("../src/database_functions.php");
             <input class="submitKnop" type="submit" name="toevoegen" value="Voeg toe">
         </form> 
     </div>
-    
 
     
     <?php 

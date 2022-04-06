@@ -20,8 +20,8 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
             <input class="inputs" type="email" name="email" id="email" placeholder="Email*" required> <br>
             <input class="inputs" type="tel" name="telefoonNr" id="telefoonNr" placeholder="Telefoon Nummer*"> <br>
             <h3 class="koppen">Dag*</h3>
-            <input class="dateTime" type="date" name="dateTime" id="dateTime"> <br>
-            <select class="inputs" name="dagdeel" id="dagdeel">
+            <input class="dateTime" type="date" name="dateTime" id="dateTime" required> <br>
+            <select class="inputs" name="dagdeel" id="dagdeel" required>
                 <option value="boot">Kies een dagdeel</option>
                 <?php
                 while($deelDag = $dagdeel->fetch(PDO::FETCH_ASSOC)){
@@ -32,7 +32,7 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
             ?>
             </select>
             <h3 class="koppen">Type boot*</h3>
-            <select class="inputs" name="boot" id="boot">
+            <select class="inputs" name="boot" id="boot" required>
                 <option value="boot">Kies een boot</option>
                 <?php
                 while($typeBoot = $boten->fetch(PDO::FETCH_ASSOC)){
@@ -60,9 +60,9 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
         $dag = $_POST['dateTime'];
         $dagDeel = $_POST['dagdeel'];
 
-        db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) 
-                       VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
-        
+        db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
+        db_insertUser("INSERT INTO `users`(`vNaam`, `aNaam`, `email`) VALUES ('$vNaam','$aNaam','$email')");
+        header("Location: ./orderConfirm.php");
     } else {
         $vNaam = "";
         $tussenNaam = "";
