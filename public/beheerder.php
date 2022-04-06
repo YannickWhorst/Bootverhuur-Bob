@@ -33,10 +33,11 @@
         <?php }?>
     </table>
 </div>
-
+<hr>
 <div class="voegBootToe">
     <h2 class="titel">Voeg een boot toe</h2>
 
+    
     <div class="voegBoot">
         <form action="" method="post">
             <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>
@@ -46,7 +47,6 @@
             <input class="submitKnop" type="submit" name="toevoegen" value="Voeg toe">
         </form> 
     </div>
-    
 
     <!-- Boot toevoegen -->
     <?php 

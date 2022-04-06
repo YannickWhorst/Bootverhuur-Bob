@@ -50,8 +50,17 @@ function db_insertUser($query){
     }
 }
 
-function getUser($email, $password) {
-    $user = db_getData("SELECT * FROM users WHERE email='$email' AND password='$password'");
+function getBeheerder($email, $password) {
+    $user = db_getData("SELECT * FROM beheerder WHERE email='$email' AND password='$password'");
+    if ($user->rowCount() > 0){
+        return $user;
+    } else {
+        return "No user found";
+    }
+}
+
+function getUser($vNaam, $aNaam, $email) {
+    $user = db_getData("SELECT * FROM users WHERE vNaam='$vNaam' AND aNaam='$aNaam' AND email='$email'");
     if ($user->rowCount() > 0){
         return $user;
     } else {
