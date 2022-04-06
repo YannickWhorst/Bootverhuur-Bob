@@ -1,11 +1,14 @@
-<?php require("../includes/header.php"); 
-      require("../src/database_functions.php");
+<?php 
+// Header en database includen
+require("../includes/header.php"); 
+require("../src/database_functions.php");
 
     // Data krijgen uit de database
     $orders = db_getData("SELECT * FROM orders");
 ?>
 <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 
+<!-- Alle orders laten zien -->
 <div>
     <h1 class="titel">Alle orders</h1>
     <table class="tabel">
@@ -33,7 +36,10 @@
         <?php }?>
     </table>
 </div>
+
+<!-- Boot toevoegen -->
 <hr>
+
 <div class="voegBootToe">
     <h2 class="titel">Voeg een boot toe</h2>
 
@@ -48,9 +54,9 @@
         </form> 
     </div>
 
-    <!-- Boot toevoegen -->
-    <?php 
     
+    <?php 
+    // Boot toevogen in de database
     if(isset($_POST['toevoegen'])){
         $naam = $_POST['bootnaam'];
         $prijs = $_POST['bootprijs'];
@@ -65,8 +71,10 @@
     ?>
 </div>
 
+<!-- Footer includen -->
 <?php require("../includes/footer.php"); ?>
 
+<!-- De oneven waardes in de tabel een andere achtergrondkleur geven -->
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

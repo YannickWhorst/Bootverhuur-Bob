@@ -70,6 +70,7 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
         $email = "";
         $telefoonNummer = "";
         $dateTime = "";
+        $dagDeel = "";
     }
 
 
