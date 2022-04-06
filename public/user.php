@@ -1,8 +1,12 @@
 <?php require("../includes/header.php"); 
       require("../src/database_functions.php");
-      $userOrders = db_getData("SELECT users.vNaam, users.aNaam, users.email, telnummer, typeBoot, dag, dagdeel
-      FROM orders, users
-      WHERE orders.vNaam = users.vNaam AND orders.aNaam = users.aNaam AND orders.email = users.email");
+    
+      if (isset($_POST['inloggen'])) {
+          $email = $_POST['UserEmail'];
+      }
+       
+      $userOrders = db_getData("SELECT *
+        FROM orders WHERE orders.email = $email");
 ?>
 <table>
     <tr>
@@ -13,21 +17,21 @@
         <td>Boot</td>
         <td>Dag en dagdeel</td>
     </tr>
-    <?php while($user = $userOrders->fetch(PDO::FETCH_ASSOC)){ ?>
+    <?php while($orderData = $userOrders->fetch(PDO::FETCH_ASSOC)){ ?>
         <tr>
-            <td><?php echo $user["vNaam"]?></td>
-            <td><?php echo $user["aNaam"]?></td>
-            <td><?php echo $user["email"]?></td>
-            <td><?php echo $user["telnummer"]?></td>
-            <td><?php echo $user["typeBoot"]?></td>
-            <td><?php echo $user["dag"]?>, <?php echo $user["dagdeel"]?></td>
+            <td><?php echo $orderData["vNaam"]?></td>
+            <td><?php echo $orderData["aNaam"]?></td>
+            <td><?php echo $orderData["email"]?></td>
+            <td><?php echo $orderData["telnummer"]?></td>
+            <td><?php echo $orderData["typeBoot"]?></td>
+            <td><?php echo $orderData["dag"]?>, <?php echo $orderData["dagdeel"]?></td>
         </tr>
     <?php }?>
     
-</table>
+</table> 
 <?php require("../includes/footer.php"); ?>
 
-<!-- De oneven waardes in de tabel een andere achtergrondkleur geven -->
+<!-- De oneven waardes in de tabel een andere achtergrondkleur geven met jquery -->
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

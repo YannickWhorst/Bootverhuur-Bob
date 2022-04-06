@@ -38,10 +38,3 @@
     display: flex;
     justify-content: center;
 }
-
-.beideForms{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 100px;
-}
