@@ -1,11 +1,9 @@
 <?php require("../includes/header.php"); 
       require("../src/database_functions.php");
-
-      $userOrders = db_getData("SELECT vNaam, aNaam, email, telnummer, typeBoot, dag, dagDeel
+      $userOrders = db_getData("SELECT users.vNaam, users.aNaam, users.email, telnummer, typeBoot, dag, dagdeel
       FROM orders, users
       WHERE orders.vNaam = users.vNaam AND orders.aNaam = users.aNaam AND orders.email = users.email");
 ?>
-
 <table>
     <tr>
         <td>Voornaam</td>
@@ -27,5 +25,14 @@
     <?php }?>
     
 </table>
-
 <?php require("../includes/footer.php"); ?>
+
+<!-- De oneven waardes in de tabel een andere achtergrondkleur geven -->
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $("table tr:odd").css({"background-color":"lightgray"});
+    });
+</script>

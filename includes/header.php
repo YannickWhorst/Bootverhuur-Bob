@@ -1,13 +1,14 @@
-<link rel="stylesheet" href="../css/header.css">
-<link rel="stylesheet" href="../css/footer.css">
-<link rel="stylesheet" href="../css/boothuren.css">
-<link rel="stylesheet" href="../css/huurFormulier.css">
-<link rel="stylesheet" href="../css/inloggen.css">
-<link rel="stylesheet" href="../css/registreren.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/beheerder.css">
-<link rel="stylesheet" href="../css/contact.css">
-<link rel="stylesheet" href="../css/orderConfirm.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/boothuren.css">
+<link rel="stylesheet" href="css/huurFormulier.css">
+<link rel="stylesheet" href="css/inloggen.css">
+<link rel="stylesheet" href="css/registreren.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/beheerder.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/orderConfirm.css">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 
 <header class="navBackground">

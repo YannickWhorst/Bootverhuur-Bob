@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inloggen</title>
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-</head>
-<body>
+<title>Inloggen</title>
     <?php 
         require("../includes/header.php"); 
         require("../src/database_functions.php");
@@ -71,6 +62,4 @@
         </div>
     </div>
 </div>
-    <?php require_once("../includes/footer.php"); ?>
-</body>
-</html>
+<?php require_once("../includes/footer.php"); ?>
