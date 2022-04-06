@@ -60,8 +60,8 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
         $dag = $_POST['dateTime'];
         $dagDeel = $_POST['dagdeel'];
 
-        db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
-        
+        db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) 
+                       VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
         
     } else {
         $vNaam = "";
@@ -70,6 +70,7 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
         $email = "";
         $telefoonNummer = "";
         $dateTime = "";
+        $dagDeel = "";
     }
 
 
