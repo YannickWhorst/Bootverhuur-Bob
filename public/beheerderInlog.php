@@ -1,4 +1,4 @@
-<title>Inloggen</title>
+<title>Inloggen voor Beheerders</title>
 <?php 
         require("includes/header.php"); 
 
@@ -6,19 +6,23 @@
         $beheerder = null;
         if (isset($_POST['beheerderInlog']))
         {
+            // De beheerder uit de database halen
             $beheerder = getBeheerder($_POST['beheerderEmail'], $_POST['beheerderPassword']);
 
+            // Kijken of er een user gevonden is
             if($beheerder !== 'No user found') {
+                // Naar de beheer pagina sturen
                 header("Location: ./beheerder.php");
                 exit;
             } else {
                 ?>
-                <h1 style="color: red">Geen user gevonden</h1>
+                    <h1 style="color: red">Geen user gevonden</h1>
                 <?php
             }
         }
     ?>
 
+<!-- Inlog formulier voor de beheerder -->
 <div id="beheerderInlog">
         <h1 class="title">Beheerders</h1>
         <div class="beheerderForm">
@@ -31,4 +35,4 @@
         </div>
     </div>
 
-    <?php require("includes/footer.php"); ?>
+<?php require("includes/footer.php"); ?>

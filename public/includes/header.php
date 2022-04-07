@@ -3,7 +3,7 @@
     require("../config/config.php");
     require("../src/database_functions.php");
 ?>
-
+<!-- Alles inlcuden -->
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>header.css">
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>footer.css">
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>boothuren.css">
@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>beheerder.css">
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>contact.css">
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>orderConfirm.css">
-<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 
 <header class="navBackground">

@@ -1,15 +1,14 @@
-<link rel="stylesheet" href="../css/huurFormulier.css">
 <title>Huur formulier</title>
-<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 <?php 
 
 require("includes/header.php");
 
+// Boten en dagdeelen uit de database halen
 $boten = db_getData("SELECT * FROM boten");
 $dagdeel = db_getData("SELECT * FROM dagdeel");
 
 ?>
-
+<!-- Huur fomulier -->
 <div>
     <h1 class="huurTitel">Formulier invullen</h1>
     <div class="formulier">
@@ -23,6 +22,7 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
             <select class="inputs" name="dagdeel" id="dagdeel" required>
                 <option value="boot">Kies een dagdeel</option>
                 <?php
+                // Alle verschillende dagdelen in een option veld zetten
                 while($deelDag = $dagdeel->fetch(PDO::FETCH_ASSOC)){
             ?>
                 <option name="boot" value="<?php echo $deelDag["Dagdeel"]?>" id="boot"><?php echo $deelDag["Dagdeel"]?></option>
@@ -34,6 +34,7 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
             <select class="inputs" name="boot" id="boot" required>
                 <option value="boot">Kies een boot</option>
                 <?php
+                // Alle verschillende dagdelen in een option veld zetten
                 while($typeBoot = $boten->fetch(PDO::FETCH_ASSOC)){
             ?>
                 <option name="boot" value="<?php echo $typeBoot["boot_naam"]?>" id="boot"><?php echo $typeBoot["boot_naam"]?></option>
@@ -59,8 +60,10 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
         $dag = $_POST['dateTime'];
         $dagDeel = $_POST['dagdeel'];
 
+        // De order en de user in de database zetten
         db_insertData("INSERT INTO `orders`(`vNaam`, `aNaam`, `email`, `telnummer`, `typeBoot`, `dag`, `dagdeel`) VALUES ('$vNaam','$aNaam','$email','$telefoonNummer','$bootType','$dag','$dagDeel')");
         db_insertUser("INSERT INTO `users`(`vNaam`, `aNaam`, `email`) VALUES ('$vNaam','$aNaam','$email')");
+        // Naar de order confirmation pagina sturen als het is gelukt
         header("Location: ./orderConfirm.php");
     } else {
         $vNaam = "";
@@ -71,7 +74,5 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
         $dateTime = "";
         $dagDeel = "";
     }
-
-
     require("includes/footer.php");
 ?>

@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boot huren</title>
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-</head>
-<body>
+<title>Boot huren</title>
 <?php 
     // Header en database_functions includen
     require("includes/header.php"); 
@@ -24,6 +15,7 @@
     </header>
     <div class="boten">
         <?php
+        // Door de boten loopen en aparte velden voor maken
             while($boot = $boten->fetch(PDO::FETCH_ASSOC)){
         ?>
             <div class="bootblok">
@@ -39,5 +31,3 @@
 </div>
 <!-- Footer includen -->
 <?php require_once("includes/footer.php"); ?>
-</body>
-</html>

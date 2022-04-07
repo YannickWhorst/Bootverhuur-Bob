@@ -1,11 +1,10 @@
-<?php 
-// Header en database includen
-require("includes/header.php"); 
+<title>Beheer pagina</title>
+
+<?php require("includes/header.php"); 
 
     // Data krijgen uit de database
     $orders = db_getData("SELECT * FROM orders");
 ?>
-<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 
 <!-- Alle orders laten zien -->
 <div>
@@ -21,6 +20,7 @@ require("includes/header.php");
             <td><h3>Dag</h3></td>
             <td><h3>Dagdeel</h3></td>
         </tr>
+        <!-- Door alle orders loopen en in een tabel zetten -->
         <?php while($order = $orders->fetch(PDO::FETCH_ASSOC)){ ?>
             <tr>
                 <td><?php echo $order["orderID"]?></td>
@@ -42,7 +42,6 @@ require("includes/header.php");
 <div class="voegBootToe">
     <h2 class="titel">Voeg een boot toe</h2>
 
-    
     <div class="voegBoot">
         <form action="" method="post">
             <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>

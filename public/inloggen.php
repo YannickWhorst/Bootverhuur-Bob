@@ -1,5 +1,5 @@
-<title>Inloggen</title>
-    <?php 
+<title>Inloggen voor Gebruikers</title>
+<?php 
         require("includes/header.php");
 ?>
 <!-- Inlog veld -->
