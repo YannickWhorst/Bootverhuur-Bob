@@ -1,12 +1,24 @@
 <?php require("../includes/header.php"); 
-      require("../src/database_functions.php");
+    require("../src/database_functions.php");
     
-      if (isset($_POST['inloggen'])) {
-          $email = $_POST['UserEmail'];
-      }
-       
-      $userOrders = db_getData("SELECT *
-        FROM orders WHERE orders.email = $email");
+    $user = null;
+    if (isset($_POST['userInlog']))
+    {
+        $vNaam = $_POST['UservNaam'];
+        $aNaam = $_POST['UseraNaam'];
+        $email = $_POST['UserEmail'];
+        $user = getUser($vNaam, $aNaam, $email);
+
+        if($user !== 'No user found') {
+            $userOrders = db_getData("SELECT DISTINCT orders.vNaam, orders.aNaam, orders.email, telnummer, typeBoot, dag, dagdeel
+            FROM orders, users
+            HAVING orders.email = \"$email\"");
+        } else {
+            ?>
+                <h1 style="color: red">Geen user gevonden</h1>
+            <?php
+        }
+    }
 ?>
 <table>
     <tr>
@@ -27,8 +39,7 @@
             <td><?php echo $orderData["dag"]?>, <?php echo $orderData["dagdeel"]?></td>
         </tr>
     <?php }?>
-    
-</table> 
+    </table>
 <?php require("../includes/footer.php"); ?>
 
 <!-- De oneven waardes in de tabel een andere achtergrondkleur geven met jquery -->

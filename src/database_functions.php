@@ -5,7 +5,7 @@ define("dbHost", "mysql:host=localhost;dbname=bootverhuur");
 define("username", "root");
 define("password", "");
 
-// Database connect functie
+// Database connect 
 function db_connect(){
     try {
         $db = new PDO(dbHost, username, password);
@@ -15,7 +15,7 @@ function db_connect(){
     }
 }
 
-// Database Informatie verkrijgen functie
+// Database Informatie verkrijgen 
 function db_getData($query) {
     try{
         $db = db_connect();
@@ -29,7 +29,7 @@ function db_getData($query) {
     
 }
 
-// Database informatie in de database stoppen functie
+// Database informatie in de database stoppen 
 function db_insertData($query) {
     try{
         $db = db_connect();
