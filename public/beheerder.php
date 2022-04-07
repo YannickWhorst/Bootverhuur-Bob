@@ -1,6 +1,6 @@
 <?php 
 // Header en database includen
-require("../includes/header.php"); 
+require("includes/header.php"); 
 require("../src/database_functions.php");
 
     // Data krijgen uit de database
@@ -72,7 +72,7 @@ require("../src/database_functions.php");
 </div>
 
 <!-- Footer includen -->
-<?php require("../includes/footer.php"); ?>
+<?php require("includes/footer.php"); ?>
 
 <!-- De oneven waardes in de tabel een andere achtergrondkleur geven -->
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>

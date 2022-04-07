@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <?php require_once("../includes/header.php"); ?>
+    <?php require_once("includes/header.php"); ?>
 
     <div>
         <h1 class="h1Title">Contact opnemen?</h1>
@@ -16,6 +16,6 @@
         <p class="contact">U ontvangt binnen 24 uur een reactie van bob</p>
     </div>
 
-    <?php require_once("../includes/footer.php"); ?>
+    <?php require_once("includes/footer.php"); ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <title>Inloggen</title>
 <?php 
-        require("../includes/header.php"); 
+        require("includes/header.php"); 
         require("../src/database_functions.php");
 
         // Code voor beheerder inlog
@@ -32,4 +32,4 @@
         </div>
     </div>
 
-    <?php require("../includes/footer.php"); ?>
+    <?php require("includes/footer.php"); ?>

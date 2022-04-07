@@ -1,4 +1,4 @@
-<?php require("../includes/header.php"); 
+<?php require("includes/header.php"); 
     require("../src/database_functions.php");
     
     $user = null;
@@ -40,7 +40,7 @@
         </tr>
     <?php }?>
     </table>
-<?php require("../includes/footer.php"); ?>
+<?php require("includes/footer.php"); ?>
 
 <!-- De oneven waardes in de tabel een andere achtergrondkleur geven met jquery -->
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>

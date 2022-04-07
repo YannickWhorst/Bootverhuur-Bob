@@ -1,6 +1,6 @@
 <title>Inloggen</title>
     <?php 
-        require("../includes/header.php"); 
+        require("includes/header.php"); 
         require("../src/database_functions.php");
 ?>
 <!-- Inlog veld -->
@@ -17,4 +17,4 @@
         </div>
     </div>
     
-<?php require_once("../includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>

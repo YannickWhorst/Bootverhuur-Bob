@@ -3,7 +3,7 @@
 <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 <?php 
 
-require("../includes/header.php");
+require("includes/header.php");
 require("../src/database_functions.php");
 
 $boten = db_getData("SELECT * FROM boten");
@@ -74,5 +74,5 @@ $dagdeel = db_getData("SELECT * FROM dagdeel");
     }
 
 
-    require("../includes/footer.php");
+    require("includes/footer.php");
 ?>

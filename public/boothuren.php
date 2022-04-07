@@ -10,7 +10,7 @@
 <body>
 <?php 
     // Header en database_functions includen
-    require("../includes/header.php"); 
+    require("includes/header.php"); 
     require("../src/database_functions.php");
 
     // Alle data van boten selecteren
@@ -39,6 +39,6 @@
 </div>
 </div>
 <!-- Footer includen -->
-<?php require_once("../includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>
 </body>
 </html>

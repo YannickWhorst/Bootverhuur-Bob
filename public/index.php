@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <?php require_once("../includes/header.php");
+    <?php require_once("includes/header.php");
         require("../src/database_functions.php");
     ?>
 
@@ -22,6 +22,6 @@
         </section>
     </div>
 
-    <?php require_once("../includes/footer.php"); ?>
+    <?php require_once("includes/footer.php"); ?>
 </body>
 </html>
