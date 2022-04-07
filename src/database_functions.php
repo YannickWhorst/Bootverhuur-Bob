@@ -1,9 +1,4 @@
 <?php
-// Database gegevens vaststellen
-
-define("dbHost", "mysql:host=localhost;dbname=bootverhuur");
-define("username", "root");
-define("password", "");
 
 // Database connect 
 function db_connect(){

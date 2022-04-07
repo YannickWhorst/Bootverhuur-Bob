@@ -4,7 +4,6 @@
 <?php 
 
 require("includes/header.php");
-require("../src/database_functions.php");
 
 $boten = db_getData("SELECT * FROM boten");
 $dagdeel = db_getData("SELECT * FROM dagdeel");

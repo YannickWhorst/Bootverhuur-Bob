@@ -1,7 +1,6 @@
 <?php 
 // Header en database includen
 require("includes/header.php"); 
-require("../src/database_functions.php");
 
     // Data krijgen uit de database
     $orders = db_getData("SELECT * FROM orders");

@@ -1,13 +1,19 @@
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/boothuren.css">
-<link rel="stylesheet" href="css/huurFormulier.css">
-<link rel="stylesheet" href="css/inloggen.css">
-<link rel="stylesheet" href="css/registreren.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/beheerder.css">
-<link rel="stylesheet" href="css/contact.css">
-<link rel="stylesheet" href="css/orderConfirm.css">
+<?php
+    require("../config/database.php");
+    require("../config/config.php");
+    require("../src/database_functions.php");
+?>
+
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>header.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>footer.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>boothuren.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>huurFormulier.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>inloggen.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>registreren.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>style.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>beheerder.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>contact.css">
+<link rel="stylesheet" href="<?php echo CSS_FOLDER;?>orderConfirm.css">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
 

@@ -1,7 +1,6 @@
 <title>Inloggen</title>
     <?php 
-        require("includes/header.php"); 
-        require("../src/database_functions.php");
+        require("includes/header.php");
 ?>
 <!-- Inlog veld -->
     <div id="userInlog">

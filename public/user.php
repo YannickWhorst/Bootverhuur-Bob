@@ -1,5 +1,4 @@
-<?php require("includes/header.php"); 
-    require("../src/database_functions.php");
+<?php require("includes/header.php");
     
     $user = null;
     if (isset($_POST['userInlog']))

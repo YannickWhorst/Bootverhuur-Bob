@@ -11,7 +11,6 @@
 <?php 
     // Header en database_functions includen
     require("includes/header.php"); 
-    require("../src/database_functions.php");
 
     // Alle data van boten selecteren
     $boten = db_getData("SELECT * FROM boten");
@@ -29,7 +28,7 @@
         ?>
             <div class="bootblok">
                 <h1><?php echo $boot["boot_naam"]?></h1>
-                <img src="../img/<?php echo $boot["boot_image"]?>" class="imgKleiner">
+                <img src="<?php echo IMG_FOLDER?><?php echo $boot["boot_image"]?>" class="imgKleiner">
                 <p><?php echo "&euro; " . number_format($boot["boot_prijs"],2,",",".")?> per uur</p>
                 <p><?php echo $boot["boot_capaciteit"]?> personen</p>
                 <a class="bootLink" href="huurFormulier.php">Boot huren</a>

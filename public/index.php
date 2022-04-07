@@ -10,7 +10,6 @@
 </head>
 <body>
     <?php require_once("includes/header.php");
-        require("../src/database_functions.php");
     ?>
 
     <div class="headerAchtergrond">
