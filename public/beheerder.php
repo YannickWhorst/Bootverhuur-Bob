@@ -1,12 +1,35 @@
-<title>Beheer pagina</title>
+<?php include('server.php');
+      include('includes/header.php');
+?>
+<?php
+$firstName = '';
+$lastName = '';
+$email = '';
+$password = '';
 
-<?php require("includes/header.php"); 
+if (isset($_GET['edit'])) {
+    $id = $_GET['edit'];
+    $update = true;
+    $boot = $db->query("SELECT * FROM boten WHERE boot_id = $id");
 
-    // Data krijgen uit de database
-    $orders = db_getData("SELECT * FROM orders");
+    if ($boot->num_rows > 0 ) {
+        $record = $boot->fetch_array();
+        // die(print_r($n));
+        $boot_id = $record['boot_id'];
+        $boot_naam = $record['boot_naam'];
+        $boot_prijs = $record['boot_prijs'];
+        $boot_capaciteit = $record['boot_capaciteit'];
+    }
+}
+?>
+<title>Beheren</title>
+<!-- Orders bekijken -->
+
+<?php
+// Data krijgen uit de database
+$orders = db_getData("SELECT * FROM orders");
 ?>
 
-<!-- Alle orders laten zien -->
 <div>
     <h1 class="titel">Alle orders</h1>
     <table class="tabel">
@@ -36,41 +59,70 @@
     </table>
 </div>
 
-<!-- Boot toevoegen -->
+<!-- Boten Bewerken -->
 <hr>
-
-<div class="voegBootToe">
-    <h2 class="titel">Voeg een boot toe</h2>
-
-    <div class="voegBoot">
-        <form action="" method="post">
-            <input type="text" name="bootnaam" id="bootnaam" placeholder="Boot naam" required> <br>
-            <input type="text" name="bootprijs" id="bootprijs" placeholder="Boot prijs" required> <br>
-            <input type="text" name="bootcapaciteit" id="bootcapaciteit" placeholder="Boot capaciteit" required> <br>
-            <input type="text" name="bootimage" id="bootimage" placeholder="Boot plaatje" required> <br>
-            <input class="submitKnop" type="submit" name="toevoegen" value="Voeg toe">
-        </form> 
+<h1 class="titel">Boten Bewerken</h1>
+<link rel="stylesheet" type="text/css" href="css/server.css">
+<?php if (isset($_SESSION['message'])): ?>
+    <div class="msg">
+        <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+        ?>
     </div>
+<?php endif ?>
+<?php $boten = $db->query("SELECT * from boten"); ?>
 
-    
-    <?php 
-    // Boot toevogen in de database
-    if(isset($_POST['toevoegen'])){
-        $naam = $_POST['bootnaam'];
-        $prijs = $_POST['bootprijs'];
-        $capaciteit = $_POST['bootcapaciteit'];
-        $plaatje = $_POST['bootimage'];
+<table>
+    <thead>
+    <tr>
+        <th>Boot naam</th>
+        <th>Boot prijs</th>
+        <th>Boot capaciteit</th>
+        <th colspan="2">Actie</th>
+    </tr>
+    </thead>
 
-        // Data inserten in de database
-        $boot = db_insertData("INSERT INTO `boten`(`boot_naam`, `boot_prijs`, `boot_capaciteit`, `boot_image`) 
-                               VALUES ('$naam','$prijs','$capaciteit','$plaatje')");
-    }
+    <?php while ($boot = $boten->fetch_assoc()) { ?>
+        <tr>
+            <td><?php echo $boot['boot_naam']; ?></td>
+            <td>€<?php echo $boot['boot_prijs']; ?></td>
+            <td><?php echo $boot['boot_capaciteit']; ?> personen</td>
+            <td>
+                <a href="beheerder.php?edit=<?php echo $boot['boot_id']; ?>" class="edit_btn">Bewerken</a>
+            </td>
+            <td>
+                <a href="server.php?del=<?php echo $boot['boot_id']; ?>" class="del_btn">Verwijderen</a>
+            </td>
+        </tr>
+    <?php } ?>
+</table>
+<form method="post" action="server.php">
+    <input type="hidden" name="boot_id" value="<?php echo $boot_id; ?>">
+    <div class="input-group">
+        <label>Boot naam</label>
+        <input type="text" name="boot_naam" value="<?php echo $boot_naam; ?>">
+    </div>
+    <div class="input-group">
+        <label>Boot prijs</label>
+        <input type="text" name="boot_prijs" value="<?php echo $boot_prijs; ?>">
+    </div>
+    <div class="input-group">
+        <label>Boot Capaciteit</label>
+        <input type="text" name="boot_capaciteit" value="<?php echo $boot_capaciteit; ?>">
+    </div>
+    <div class="input-group">
+        <?php if ($update == true): ?>
+            <button class="btn" type="submit" name="update" style="background: #2E8B57;">Updaten</button>
+        <?php else: ?>
+            <button class="btn" type="submit" name="save" >Opslaan</button>
+        <?php endif ?>
+    </div>
+</form>
 
-    ?>
-</div>
-
-<!-- Footer includen -->
-<?php require("includes/footer.php"); ?>
+<?php
+include('includes/footer.php');
+?>
 
 <!-- De oneven waardes in de tabel een andere achtergrondkleur geven -->
 <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>

@@ -23,7 +23,7 @@
             <li class="navLi"><a class="navA" href="index.php">Home</a></li>
             <li class="navLi"><a class="navA" href="boothuren.php">Huren</a></li>
             <li class="navLi"><a class="navA" href="contact.php">Contact</a></li>
-            <li class="navLi"><a class="navA" href="inloggen.php">Inloggen</a></li>
+            <li class="navLi"><a class="navA" href="inloggen.php">Bestel Geschiedenis</a></li>
             <li class="navLi"><a class="navA" href="beheerderInlog.php">Beheerders</a></li>
         </ul>
     </nav> 
