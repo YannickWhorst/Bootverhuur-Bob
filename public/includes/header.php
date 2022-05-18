@@ -15,7 +15,6 @@
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>contact.css">
 <link rel="stylesheet" href="<?php echo CSS_FOLDER;?>orderConfirm.css">
 
-
 <header class="navBackground">
     <nav class="container">
         <h1 class="navTitle">Bootverhuur Bob</h1>
