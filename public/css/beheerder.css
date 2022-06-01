@@ -50,8 +50,6 @@ form {
     margin: 50px auto;
     text-align: center;
     padding: 20px;
-    border: 1px solid #bbbbbb;
-    border-radius: 5px;
 }
 
 .input-group {
@@ -102,4 +100,9 @@ form {
     border: 1px solid #3c763d;
     width: 50%;
     text-align: center;
+}
+
+.boot_table{
+    display: flex;
+    justify-content: center;
 }
